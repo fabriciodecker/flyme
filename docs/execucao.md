@@ -12,7 +12,7 @@ Registrar a execução do projeto com foco em:
 
 ## 2) Status geral
 - Data de início: 27/02/2026
-- Status atual: Planejamento de implementação
+- Status atual: Sprint 0 em andamento
 - Documento de referência: [requisitos_refinados.md](requisitos_refinados.md)
 
 ## 3) Macroplano de execução
@@ -40,23 +40,39 @@ Registrar a execução do projeto com foco em:
 - [x] Regras de recebimento do valor base do voo refinadas (executor, terceiro e seller).
 - [x] Regra de repasse pendente formalizada com evento negativo em aberto para o executor quando terceiro/seller recebe.
 - [x] Separação explícita entre recebedor do valor base e recebedor de câmera extra definida.
+- [x] Projeto Flutter inicializado e publicado no GitHub.
+- [x] Estrutura base em camadas criada (`lib/src/app`, `lib/src/core`, `lib/src/features`).
+- [x] Gerenciamento de estado configurado com `flutter_riverpod`.
+- [x] Teste de widget adaptado para a nova base e validado.
+- [x] Dependências Firebase adicionadas (`firebase_core`, `firebase_auth`, `cloud_firestore`).
+- [x] Bootstrap Firebase com fallback visual de configuração pendente implementado.
+- [x] Guia de setup local criado em `docs/firebase_setup.md`.
+- [x] Plano formal de ambientes `dev/prod` criado em `docs/ambientes.md`.
+- [x] Guia Firebase atualizado para configuração multi-ambiente (`APP_ENV`).
+- [x] Tela de login email/senha implementada no app com fluxo de autenticação Firebase.
+- [x] Ambiente `flyme-dev` conectado ao app via `firebase_options_dev.dart` para testes web.
+- [x] Recuperação de senha implementada via Firebase Auth (`sendPasswordResetEmail`).
+- [x] Botão de teste Firestore implementado na Home para gravação em `healthcheck`.
+- [x] Auth Gate global implementado para rotear automaticamente entre Login e Home pelo estado de autenticação.
+- [x] Login com Google implementado na tela de autenticação.
+- [x] CRUD de usuários (admin) implementado com acesso restrito por `admin_users/{uid}.isAdmin`.
 
 ## 5) Backlog operacional imediato
 ### Sprint 0 — Fundação técnica
-- [ ] Criar projeto Flutter base.
-- [ ] Configurar Firebase (Auth + Firestore).
-- [ ] Definir estrutura de camadas (dados, domínio, apresentação).
-- [ ] Configurar gerenciamento de estado.
-- [ ] Configurar ambiente de desenvolvimento e scripts.
+- [x] Criar projeto Flutter base.
+- [x] Configurar Firebase (Auth + Firestore) na base do app.
+- [x] Definir estrutura de camadas (dados, domínio, apresentação).
+- [x] Configurar gerenciamento de estado.
+- [x] Configurar ambiente de desenvolvimento e scripts.
 
 ### Sprint 1 — Acesso e autorização
-- [ ] Implementar login Google.
-- [ ] Implementar login email/senha.
-- [ ] Implementar recuperação de senha.
-- [ ] Implementar guarda de rotas/permissões por perfil de sistema.
+- [x] Implementar login Google.
+- [x] Implementar login email/senha.
+- [x] Implementar recuperação de senha.
+- [x] Implementar guarda de rotas/permissões por perfil de sistema (nível autenticação).
 
 ### Sprint 2 — Cadastros admin
-- [ ] CRUD de usuários.
+- [x] CRUD de usuários.
 - [ ] CRUD de clubes.
 - [ ] CRUD de papéis.
 - [ ] CRUD de vínculo usuário-papel.
@@ -106,4 +122,4 @@ Registrar a execução do projeto com foco em:
 - Risco principal: conflitos de sincronização em cenários offline concorrentes.
 
 ## 9) Próxima ação recomendada
-Iniciar Sprint 0 criando o projeto Flutter e configurando Firebase.
+Iniciar próximo item da Sprint 2: CRUD de clubes.
